@@ -1,4 +1,54 @@
 {
-    "users":[],
-    "restaurants":[]
+  "users": [
+    
+    {
+      "name": "Anil",
+      "username": "anil123",
+      "email": "anil@test.com",
+      "password": "anil@123",
+      "admin": true,
+      "id": 3
+    },
+    {
+      "name": "abhishek",
+      "username": "abhishek123",
+      "email": "abhishek@test.com",
+      "password": "abhishek@123",
+      "admin": true,
+      "id": 4
+    },
+    {
+      "name": "amit",
+      "username": "amit123",
+      "email": "amit@test.com",
+      "password": "amit@123",
+      "admin": true,
+      "id": 5
+    },
+    {
+      "name": "test",
+      "username": "test123",
+      "email": "test@test.com",
+      "password": "test@123",
+      "admin": false,
+      "id": 6
+    },
+    {
+      "name": "admin",
+      "username": "admin",
+      "email": "admin@test.com",
+      "password": "admin",
+      "admin": true,
+      "id": 7
+    },
+    {
+      "name": "user",
+      "username": "user",
+      "email": "user@test.com",
+      "password": "user",
+      "admin": false,
+      "id": 8
+    }
+  ],
+  "restaurants": []
 }

@@ -1,5 +1,6 @@
 <template>
     <div class="container label">
+        <h1 class="text-center">Register</h1><br><br>
         <form>
             <div class="mb-4">
                 <label for="exampleInputName" class="form-label">Name</label>
@@ -24,18 +25,29 @@
                     special characters, or emoji.
                 </div>
             </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" v-model="user.admin">
+                <label class="form-check-label" for="exampleCheck1">Check for admin</label>
+            </div>
+            <div class="mb-4" v-if="user.admin === true">
+                <label for="exampleInputName" class="form-label">Answer the secret question!</label>
+                <input type="text" class="form-control" id="exampleInputName" v-model="check">
+                <p class="form-text color-red" v-if="check !== ans">Incorrect answer</p>
+            </div>
+            <button @click.prevent="signup" class="btn btn-primary">Submit</button>
         </form>
         <br>
         <div class="container text-center">
-            <p class="form-text">New User?</p>
-            <button class="btn btn-outline-info" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" @click="$emit('login')">Login</button>
+            <p class="form-text">Already have an account?</p>
+            <button class="btn btn-outline-info"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                @click="$emit('login')">Login</button>
         </div>
     </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     name: 'SignUp',
     data() {
@@ -45,10 +57,39 @@ export default {
                 username: '',
                 email: '',
                 password: '',
-            }
+                admin: false
+            },
+            check: '',
+            ans: 'admin'
         }
     },
-    emits: ['login']
+    emits: ['login'],
+    methods: {
+        signup() {
+            if (this.check === this.ans) {
+
+                console.log(this.user)
+                axios.post("http://localhost:3000/users", this.user).then((result) => {
+
+                    console.log(result);
+                    if (result.status === 201) {
+                        this.$router.push({ path: '/admin/' + this.user.username })
+                    }
+                })
+            }
+            else if (this.user.admin === false) {
+                console.log(this.user)
+                axios.post("http://localhost:3000/users", this.user).then((result) => {
+
+                    console.log(result);
+                    if (result.status === 201) {
+                        this.$router.push({ path: '/user/' + this.user.username })
+                    }
+                })
+            }
+
+        }
+    }
 }
 </script>
 
@@ -59,6 +100,6 @@ export default {
     padding: 20px;
     border-radius: 40px;
     margin-top: 20px;
-    
+
 }
 </style>
