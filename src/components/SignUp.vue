@@ -44,6 +44,7 @@
                 @click="$emit('login')">Login</button>
         </div>
     </div>
+    
 </template>
 
 <script>

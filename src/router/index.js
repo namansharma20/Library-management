@@ -3,6 +3,7 @@ import HomeView from '../components/HomeView.vue';
 import MainLogin from '../components/MainLogin.vue';
 import UserHome from '../components/UserHome.vue';
 import AdminHome from '../components/AdminHome.vue';
+import BookDetails from '../components/BookDetails.vue';
 const router= createRouter(
     {
         history:createWebHistory(),
@@ -27,6 +28,11 @@ const router= createRouter(
                 path:'/admin/:admin',
                 component:AdminHome,
             },
+            {
+                name:'BookDetails',
+                path:'/bookdetail/:bookid',
+                component:BookDetails,
+            }
         ]
     })
 

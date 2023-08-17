@@ -1,6 +1,5 @@
 {
   "users": [
-    
     {
       "name": "Anil",
       "username": "anil123",
@@ -48,7 +47,112 @@
       "password": "user",
       "admin": false,
       "id": 8
+    },
+    {
+      "name": "naman",
+      "username": "naman",
+      "email": "naman@test.com",
+      "password": "naman@123",
+      "admin": false,
+      "id": 9
+    },
+    {
+      "name": "abhishek",
+      "username": "abhishek",
+      "email": "abhishek@test.com",
+      "password": "abhishek@123",
+      "admin": false,
+      "id": 10
     }
   ],
-  "restaurants": []
+  "books": [
+    {
+      "name": "Harry Potter",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse soluta aut voluptas vel nihil sapiente alias neque vitae, quidem et!",
+      "img": "test.jpg",
+      "issueto": "naman",
+      "contact": "9653468084",
+      "issuedate": "23/08/23",
+      "submitdate": "24/08/23",
+      "instock": false,
+      "id": 1
+    },
+    {
+      "name": "Harry Potter",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse soluta aut voluptas vel nihil sapiente alias neque vitae, quidem et!",
+      "img": "test.jpg",
+      "issueto": "naman",
+      "contact": "34565756",
+      "issuedate": "23/45/23",
+      "submitdate": "23/35/23",
+      "instock": false,
+      "id": 2
+    },
+    {
+      "name": "Harry Potter",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse soluta aut voluptas vel nihil sapiente alias neque vitae, quidem et!",
+      "img": "test.jpg",
+      "issueto": "amit",
+      "contact": "354645745",
+      "issuedate": "24325435",
+      "submitdate": "3456436534",
+      "instock": false,
+      "id": 3
+    },
+    {
+      "name": "Harry Potter",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse soluta aut voluptas vel nihil sapiente alias neque vitae, quidem et!",
+      "img": "test.jpg",
+      "issueto": "",
+      "contact": "",
+      "issuedate": "",
+      "submitdate": "",
+      "instock": true,
+      "id": 4
+    },
+    {
+      "name": "Harry Potter",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse soluta aut voluptas vel nihil sapiente alias neque vitae, quidem et!",
+      "img": "test.jpg",
+      "issueto": "",
+      "contact": "",
+      "issuedate": "",
+      "submitdate": "",
+      "instock": true,
+      "id": 5
+    },
+    {
+      "name": "Harry Potter",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse soluta aut voluptas vel nihil sapiente alias neque vitae, quidem et!",
+      "img": "test.jpg",
+      "issueto": "abhishek",
+      "contact": "w3543646",
+      "issuedate": "43735754",
+      "submitdate": "47357465",
+      "instock": false,
+      "id": 6
+    },
+    {
+      "name": "Harry Potter",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse soluta aut voluptas vel nihil sapiente alias neque vitae, quidem et!",
+      "img": "test.jpg",
+      "issueto": "",
+      "contact": "",
+      "issuedate": "",
+      "submitdate": "",
+      "instock": true,
+      "id": 7
+    },
+    {
+      "name": "Harry Potter",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse soluta aut voluptas vel nihil sapiente alias neque vitae, quidem et!",
+      "img": "test.jpg",
+      "issueto": "",
+      "contact": "",
+      "issuedate": "",
+      "submitdate": "",
+      "instock": true,
+      "id": 8
+    }
+  ]
 }
