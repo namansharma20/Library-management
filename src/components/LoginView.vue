@@ -51,9 +51,11 @@ export default {
                     // console.log('login approved')
                     this.user = result.data[0]
                     if (this.user.admin) {
+                        localStorage.setItem("admin-info",JSON.stringify(result.data[0].username))
                         this.$router.push({ path: '/admin/' + this.user.username })
                     }
                     else {
+                        localStorage.setItem("user-info",JSON.stringify(result.data[0].username))
                         this.$router.push({ path: '/user/' + this.user.username })
                     }
                 }

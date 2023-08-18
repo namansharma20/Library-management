@@ -63,6 +63,14 @@
       "password": "abhishek@123",
       "admin": false,
       "id": 10
+    },
+    {
+      "name": "",
+      "username": "",
+      "email": "",
+      "password": "",
+      "admin": false,
+      "id": 11
     }
   ],
   "books": [

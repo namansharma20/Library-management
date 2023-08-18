@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <h1>Admin Dashboard!</h1>
+        <a href="" v-on:click="logout">Logout</a>
         <table class="table table-success table-striped">
             <thead>
                 <tr>
@@ -47,10 +48,19 @@ export default {
         }
     },
     mounted(){
+        let admin = localStorage.getItem('admin-info');
+
+        if (!admin) {
+            this.$router.push({
+                name: 'Login'
+            });
+        }
+        else{
         axios.get("http://localhost:3000/books").then((result)=>{
             console.log(result.data)
             this.books=result.data
         })
+        }
     },
     methods:{
         details(id){
@@ -76,6 +86,11 @@ export default {
                 console.log(result);
             });
         },
+        logout(){
+            localStorage.clear();
+            this.$router.push({name:'Login'})
+        }
+    
        
     }
 }
